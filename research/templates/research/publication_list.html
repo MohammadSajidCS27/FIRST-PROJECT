@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h2>Publications</h2>
+  <p><a href="/research/publications/add/">Add Publication</a></p>
+  <table>
+    <thead><tr><th>Title</th><th>Authors</th><th>Venue</th><th>Year</th><th>Project</th></tr></thead>
+    <tbody>
+      {% for p in publications %}
+      <tr><td>{{ p.title }}</td><td>{{ p.authors }}</td><td>{{ p.venue }}</td><td>{{ p.year }}</td><td>{{ p.project|default:'-' }}</td></tr>
+      {% empty %}
+      <tr><td colspan="5">No publications.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+

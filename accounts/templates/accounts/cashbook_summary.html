@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h2>Cashbook Summary</h2>
+  <div class="grid">
+    <div class="card"><strong>Income</strong><div>₹ {{ totals.income }}</div></div>
+    <div class="card"><strong>Expenditure</strong><div>₹ {{ totals.expenditure }}</div></div>
+    <div class="card"><strong>Balance</strong><div>₹ {{ totals.balance }}</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Recent Entries</h3>
+  <table>
+    <thead><tr><th>Date</th><th>Type</th><th>Amount</th><th>Source</th><th>Description</th></tr></thead>
+    <tbody>
+      {% for e in entries %}
+      <tr>
+        <td>{{ e.date }}</td><td>{{ e.entry_type }}</td><td>{{ e.amount }}</td><td>{{ e.source }}</td><td>{{ e.description }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="5">No entries.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><a href="/accounts/cashbook/add/">Add Entry</a></p>
+</div>
+{% endblock %}
+

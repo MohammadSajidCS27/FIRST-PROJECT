@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h2>Grade Sheet</h2>
+  <form method="get">
+    {{ form.as_p }}
+    <label for="semester">Semester</label>
+    <select name="semester" id="semester">
+      {% for s in semesters %}
+        <option value="{{ s.id }}" {% if semester and semester.id == s.id %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Show</button>
+  </form>
+</div>
+
+{% if student and semester %}
+<div class="card">
+  <h3>{{ student.full_name }} ({{ student.roll_number }})</h3>
+  <p><strong>Semester:</strong> {{ semester }}</p>
+  <table>
+    <thead>
+      <tr><th>Course</th><th>Credits</th><th>Grade</th><th>Points</th></tr>
+    </thead>
+    <tbody>
+      {% for e in enrollments %}
+      <tr>
+        <td>{{ e.course.code }} - {{ e.course.title }}</td>
+        <td>{{ e.course.credits }}</td>
+        <td>{{ e.grade_letter|default:'-' }}</td>
+        <td>{{ e.grade_point|default:'-' }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><strong>GPA:</strong> {{ gpa }} | <strong>CGPA:</strong> {{ cgpa }}</p>
+</div>
+{% endif %}
+{% endblock %}
+
