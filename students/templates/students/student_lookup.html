@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h2>Student Lookup</h2>
+  <form method="get">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+{% if student %}
+<div class="card">
+  <h3>{{ student.full_name }} ({{ student.roll_number }})</h3>
+  <p>Address: {{ student.address }}</p>
+  <h4>Enrollments</h4>
+  <table>
+    <thead>
+      <tr><th>Semester</th><th>Course</th><th>Credits</th><th>Grade</th><th>Points</th></tr>
+    </thead>
+    <tbody>
+    {% for e in enrollments %}
+      <tr>
+        <td>{{ e.semester }}</td>
+        <td>{{ e.course.code }} - {{ e.course.title }}</td>
+        <td>{{ e.course.credits }}</td>
+        <td>{{ e.grade_letter|default:'-' }}</td>
+        <td>{{ e.grade_point|default:'-' }}</td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="5">No enrollments found.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+{% endblock %}
+
