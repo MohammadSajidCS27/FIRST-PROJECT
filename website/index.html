@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A beautiful, modern, responsive website template.">
+    <title>Nova — Modern Web Template</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home" aria-label="Nova Home">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                <span class="brand-text">Nova</span>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+                <ul id="primary-nav" class="nav-list">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#showcase">Showcase</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle dark mode">🌙</button>
+                <a class="btn btn-primary" href="#pricing">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero section">
+            <div class="container grid-2">
+                <div class="hero-copy reveal">
+                    <h1 class="hero-title">Build fast. Look stunning.</h1>
+                    <p class="hero-subtitle">A polished, accessible, responsive template to kickstart your next idea — no build tools required.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="#features">Explore Features</a>
+                        <a class="btn btn-outline" href="#showcase">See Showcase</a>
+                    </div>
+                    <ul class="hero-points">
+                        <li>Performance-first design</li>
+                        <li>Dark mode out of the box</li>
+                        <li>Vanilla HTML/CSS/JS, deploy anywhere</li>
+                    </ul>
+                </div>
+                <div class="hero-art reveal">
+                    <div class="glass-card">
+                        <div class="gradient-sphere"></div>
+                        <div class="stat">
+                            <span class="stat-value">98</span>
+                            <span class="stat-label">Lighthouse</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value"><span class="pulse"></span> 24ms</span>
+                            <span class="stat-label">First Byte</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">A+</span>
+                            <span class="stat-label">Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <h2>Everything you need</h2>
+                    <p>Thoughtful components and utilities that help you move fast without cutting corners.</p>
+                </header>
+                <div class="features-grid">
+                    <article class="feature reveal">
+                        <div class="feature-icon" aria-hidden="true">⚡</div>
+                        <h3>Blazing fast</h3>
+                        <p>No bundlers or frameworks required. Just open and ship.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="feature-icon" aria-hidden="true">🌓</div>
+                        <h3>Dark mode</h3>
+                        <p>Automatic and persistent theme toggle with sensible defaults.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="feature-icon" aria-hidden="true">🔒</div>
+                        <h3>Accessible</h3>
+                        <p>Semantic HTML, focus styles, and proper contrast built-in.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="feature-icon" aria-hidden="true">🎨</div>
+                        <h3>Beautiful</h3>
+                        <p>Clean typography, fluid spacing, and tasteful motion.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="feature-icon" aria-hidden="true">🧩</div>
+                        <h3>Composable</h3>
+                        <p>Use our utilities or drop in your own components easily.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="feature-icon" aria-hidden="true">🚀</div>
+                        <h3>Deploy anywhere</h3>
+                        <p>Works on GitHub Pages, Netlify, Vercel, S3, or your server.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="section alt">
+            <div class="container">
+                <header class="section-header reveal">
+                    <h2>Showcase</h2>
+                    <p>Pre-styled cards you can customize for projects or case studies.</p>
+                </header>
+                <div class="card-grid">
+                    <article class="card reveal">
+                        <div class="card-media gradient-1" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Project Aurora</h3>
+                            <p>A minimal analytics dashboard with real-time insights.</p>
+                            <a class="card-link" href="#">Learn more →</a>
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-media gradient-2" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Helios UI</h3>
+                            <p>A component library with a focus on legibility.</p>
+                            <a class="card-link" href="#">Learn more →</a>
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-media gradient-3" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Neon Forms</h3>
+                            <p>Smart forms with validation and delightful UX.</p>
+                            <a class="card-link" href="#">Learn more →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <h2>Simple pricing</h2>
+                    <p>Start free. Upgrade when you grow.</p>
+                </header>
+                <div class="pricing-grid">
+                    <div class="price-card reveal">
+                        <h3>Starter</h3>
+                        <p class="price"><span class="currency">$</span>0</p>
+                        <ul class="price-features">
+                            <li>1 project</li>
+                            <li>Community support</li>
+                            <li>Basic components</li>
+                        </ul>
+                        <button class="btn btn-outline">Get started</button>
+                    </div>
+                    <div class="price-card featured reveal">
+                        <h3>Pro</h3>
+                        <p class="price"><span class="currency">$</span>19<span class="per">/mo</span></p>
+                        <ul class="price-features">
+                            <li>Unlimited projects</li>
+                            <li>Priority support</li>
+                            <li>Full component kit</li>
+                        </ul>
+                        <button class="btn btn-primary">Upgrade</button>
+                    </div>
+                    <div class="price-card reveal">
+                        <h3>Team</h3>
+                        <p class="price"><span class="currency">$</span>49<span class="per">/mo</span></p>
+                        <ul class="price-features">
+                            <li>Everything in Pro</li>
+                            <li>Collaboration tools</li>
+                            <li>SSO & audit logs</li>
+                        </ul>
+                        <button class="btn btn-outline">Contact sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section alt">
+            <div class="container">
+                <header class="section-header reveal">
+                    <h2>Frequently asked</h2>
+                    <p>Quick answers to common questions.</p>
+                </header>
+                <div class="faq">
+                    <details class="reveal">
+                        <summary>Can I use this commercially?</summary>
+                        <p>Yes. Customize and use it for personal or commercial projects.</p>
+                    </details>
+                    <details class="reveal">
+                        <summary>Do I need any build tools?</summary>
+                        <p>No. It is plain HTML, CSS, and JavaScript. Optional CDNs only.</p>
+                    </details>
+                    <details class="reveal">
+                        <summary>Is it accessible?</summary>
+                        <p>We prioritize semantic markup, focus rings, and color contrast.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <h2>Contact us</h2>
+                    <p>Have a question or want a custom build? Reach out.</p>
+                </header>
+                <form class="contact-form reveal" action="#" method="post" novalidate>
+                    <div class="form-grid">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" placeholder="Jane Doe" required>
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="jane@example.com" required>
+                        </label>
+                        <label class="full">
+                            <span>Message</span>
+                            <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send message</button>
+                    <p class="form-note">By submitting, you agree to our <a href="#">terms</a>.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                <span class="brand-text">Nova</span>
+            </div>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <p class="copyright">© <span id="year"></span> Nova. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js" defer></script>
+    <noscript>
+        <style>.reveal{opacity:1;transform:none}</style>
+    </noscript>
+</body>
+</html>
+
